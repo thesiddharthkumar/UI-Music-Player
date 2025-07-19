@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTD - Glass Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="main">
+        <div class="card-container">
+            <div class="card" id="music-card">
+
+                <div class="front">
+                    <div class="player-header">
+                        <button class="header-btn" id="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="header-btn" id="flip-btn" aria-label="About player">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </button>
+                    </div>
+
+                    <div class="music-cover">
+                        <img src="Image.png" alt="Album Cover" id="album-cover">
+                        <button class="favorite-btn" id="favorite-btn" aria-label="Add to favorites">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="wave-container">
+                        <div class="wave" id="wave">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="music-info">
+                        <h3 id="song-title">Dreamscape Echoes</h3>
+                        <p id="song-artist">Aurora Collective</p>
+                    </div>
+
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
+                    </div>
+
+                    <div class="time-info">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">3:45</span>
+                    </div>
+
+                    <div class="controls">
+                        <button id="prev-btn" aria-label="Previous song">
+                            <i class="fas fa-backward-step"></i>
+                        </button>
+                        <button class="play-btn" id="play-btn" aria-label="Play/Pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next-btn" aria-label="Next song">
+                            <i class="fas fa-forward-step"></i>
+                        </button>
+                    </div>
+
+                    <div class="volume-control">
+                        <i class="fas fa-volume-low"></i>
+                        <div class="volume-slider" id="volume-slider">
+                            <div class="volume-progress" id="volume-progress"></div>
+                        </div>
+                        <i class="fas fa-volume-high"></i>
+                    </div>
+
+                    <div class="playlist-section" id="main-playlist-section">
+                        <div class="playlist-tabs">
+                            <div class="playlist-tab" data-tab="current"><i class="fa-solid fa-headphones"></i> Current
+                            </div>
+                            <div class="playlist-tab" data-tab="playlists"> <i class="fa-solid fa-music"></i> Playlists
+                            </div>
+                            <div class="playlist-tab" data-tab="favorites"><i class="fa-solid fa-heart"></i> Favorites
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="back-content">
+                        <h2>About Us</h2>
+                        <p>MelodyMix is your sleek, modern music companion. Featuring dynamic playlists, a seamless
+                            favorite system, and a captivating visualizer, it's designed for an immersive auditory
+                            experience.</p>
+                        <p>Crafted with pure HTML, CSS, and JavaScript, ensuring a smooth and responsive interface
+                            across all devices.</p>
+                        <button class="show-now-btn" id="show-now-btn">Go to Player</button>
+
+                        <div class="social-icon">
+                            <div class="social-content">
+                                <span>Follow Now</span>
+                                <div class="links">
+                                    <a href="https://www.youtube.com/@NoneTechDevelopers" aria-label="Twitter"><i class="fab fa-youtube"></i></a>
+                                    <a href="https://www.instagram.com/nonetechdevelopers/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://whatsapp.com/channel/0029Vb6kOCtCcW4wSIxNY71s" aria-label="GitHub"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content-overlay" id="tab-content-overlay">
+                    <div class="tab-content-overlay-header">
+                        <h3 class="tab-content-overlay-title" id="tab-overlay-title"></h3>
+                        <button class="close-overlay-btn" id="close-overlay-btn" aria-label="Close section">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="tab-content-overlay-body" id="tab-overlay-body"></div>
+                </div>
+
+         
+                <div class="modal-overlay" id="confirmation-modal">
+                    <div class="modal-content">
+                        <h4 id="modal-message">Are you sure you want to delete this playlist?</h4>
+                        <div class="modal-buttons">
+                            <button class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                            <button class="confirm-btn" id="modal-confirm-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="Scripts.js"></script>
+</body>
+
+</html>
